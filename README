@@ -1,0 +1,44 @@
+
+README
+
+Contents: lab0.c, Makefile, backtrace.png, breakpoint.png, README
+
+lab0
+
+This program will read the contents of input filename1 and write it into output filename2.
+
+USAGE
+
+	lab0 [sc] -i filename1 -o filename2
+
+-i denotes the input file
+-o denotes the output file
+-s creates a segmentation fault within the program
+-c registers a signal handler to detect a segmentation fault
+
+
+lab0.c
+This contains the source code of the program.
+
+Makefile
+This completes all the necessary steps to compile the program into a distributable form as well as other tasks such as checking or removing the program.
+
+Makefile Options
+Using make on its own will just compile the lab0 program.
+  dist: using make dist will create a tarball containing the lab0 program files
+  clean: using make clean will remove all files previously created using this makefile and return it to its untared state
+  check: using make check will initiate a test on the lab0 program to verify if it is working correctly
+The checks performed are:
+	testComplete - checks if the program successfully finishes
+	testOpt - checks if the program will detect invalid arguments
+	testIO - checks if the program will detect a file that cannot be read or written to
+	testSeg - checks if the program will detect a segmentation fault
+
+backtrace.png 
+breakpoint.png
+These files contain screenshots of a backtrace and breakpoint at a segmentation fault in lab0 found through the gdb debugger.
+	
+Citation
+I used the following websites for examples and guides to help with this project.
+https://www.gnu.org/
+https://linux.die.net/
